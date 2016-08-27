@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="facci.com.proyectomaml.MainActivityMAML">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nombre :"
+        android:id="@+id/lblNombre"
+        android:layout_below="@+id/lblID"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Apellido :"
+        android:id="@+id/lblApellido"
+        android:layout_alignBaseline="@+id/txtApellido"
+        android:layout_alignBottom="@+id/txtApellido"
+        android:layout_alignStart="@+id/lblNombre" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNombre"
+        android:layout_alignBottom="@+id/lblNombre"
+        android:layout_toEndOf="@+id/lblApellido" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtApellido"
+        android:layout_below="@+id/lblNombre"
+        android:layout_toEndOf="@+id/lblApellido" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="RECINTOELECTORAL :"
+        android:id="@+id/lblRecintoelectoral"
+        android:layout_below="@+id/txtApellido"
+        android:layout_toStartOf="@+id/txtAñonacimiento"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAñonacimiento"
+        android:layout_below="@+id/txtApellido"
+        android:layout_alignStart="@+id/txtApellido" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Añonaciniento :"
+        android:id="@+id/lblAñonacimiento"
+        android:layout_below="@+id/lblRecintoelectoral"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRecintoelectoral"
+        android:layout_below="@+id/txtApellido"
+        android:layout_alignStart="@+id/txtApellido" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ingresar"
+        android:id="@+id/btnIngresar"
+        android:onClick="insertarClick"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/lblID" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar TODOS"
+        android:id="@+id/btnBuscarTodos"
+        android:onClick="buscarTodosClick"
+        android:layout_alignTop="@+id/btnIngresar"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ID:"
+        android:id="@+id/lblID"
+       android:layout_alignStart="@+id/lblApellido"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtID"
+        android:layout_alignBaseline="@+id/lblID"
+        android:layout_alignBottom="@+id/lblID" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modificar"
+        android:id="@+id/btnModificar"
+        android:layout_below="@+id/btnIngresar"
+        android:layout_alignEnd="@+id/btnIngresar"
+        android:layout_marginTop="26dp"
+        android:onClick="modificarRegistroClick"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:id="@+id/btnEliminar"
+        android:layout_alignBottom="@+id/btnModificar"
+        android:layout_alignStart="@+id/btnBuscarTodos"
+        android:onClick="eliminarRegistroClick"/>
+
+</RelativeLayout>
